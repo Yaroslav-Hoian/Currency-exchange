@@ -1,18 +1,15 @@
-import Grid from '../Grid/Grid';
-import GridItem from '../GridItem/GridItem';
-
 import styles from './RatesList.module.css';
 
 export default function RatesList({ rates }) {
   return (
-    <Grid>
+    <ul className={styles.list}>
       {rates.map(({ key, value }) => (
-        <GridItem key={key}>
+        <li className={styles.item} key={key}>
           <p className={styles.text}>
             1 {key} = {value}
           </p>
-        </GridItem>
+        </li>
       ))}
-    </Grid>
+    </ul>
   );
 }
