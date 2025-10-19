@@ -1,4 +1,5 @@
 //components/Filter/Filter.tsx
+// components/Filter/Filter.tsx
 import { useCurrencyStore } from '@/lib/stores/currencyStore';
 import styles from './Filter.module.css';
 

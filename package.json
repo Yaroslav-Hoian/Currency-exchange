@@ -13,7 +13,7 @@
     "axios": "^1.9.0",
     "formik": "^2.4.6",
     "modern-normalize": "^3.0.1",
-    "next": "15.3.1",
+    "next": "^15.5.6",
     "react": "^19.0.0",
     "react-animated-text": "^0.1.4",
     "react-dom": "^19.0.0",
@@ -23,7 +23,7 @@
     "react-spinners": "^0.17.0",
     "use-debounce": "^10.0.4",
     "yup": "^1.6.1",
-    "zustand": "^5.0.6"
+    "zustand": "^5.0.8"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
