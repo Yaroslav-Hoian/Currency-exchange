@@ -7,6 +7,8 @@ type CurrencyState = {
   baseCurrency: string;
   setBaseCurrency: (currency: string) => void;
   fetchAndSetCurrency: (latitude: number, longitud: number) => Promise<void>;
+  filter: string;
+  setFilter: (filter: string) => void;
 
   hasHydrated: boolean;
   setHasHydrated: (state: boolean) => void;
@@ -16,8 +18,10 @@ export const useCurrencyStore = create<CurrencyState>()(
   persist(
     (set) => ({
       baseCurrency: 'USD',
-
       setBaseCurrency: (currency) => set({ baseCurrency: currency }),
+
+      filter: '',
+      setFilter: (filter) => set({ filter }),
 
       hasHydrated: false,
       setHasHydrated: (state) => set({ hasHydrated: state }),
@@ -31,7 +35,12 @@ export const useCurrencyStore = create<CurrencyState>()(
         }
       },
     }),
-    { name: 'currency-storage' }
+    {
+      name: 'currency-storage',
+      onRehydrateStorage: () => (state) => {
+        state?.setHasHydrated(true);
+      },
+    }
   )
 );
 

@@ -7,6 +7,7 @@ import Section from '@/components/Section/Section';
 import Heading from '@/components/Heading/Heading';
 
 import css from './RatesPage.module.css';
+import Filter from '@/components/Filter/Filter';
 
 export default function RatesPage() {
   const isError = false;
@@ -26,7 +27,7 @@ export default function RatesPage() {
               />
             }
           />
-
+          <Filter />
           {isError && (
             <Heading error title="Something went wrong...😐 We cannot show current rates!" />
           )}
